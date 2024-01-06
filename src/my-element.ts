@@ -25,21 +25,18 @@ export class MyElement extends LitElement {
 
   render() {
     return html`
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src=${viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://lit.dev" target="_blank">
-          <img src=${litLogo} class="logo lit" alt="Lit logo" />
-        </a>
-      </div>
-      <slot></slot>
-      <div class="card">
-        <button @click=${this._onClick} part="button">
-          count is ${this.count}
-        </button>
-      </div>
-      <p class="read-the-docs">${this.docsHint}</p>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3">The table header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <td>The table body</td>
+        <td>with two columns</td>
+        <td>and three rows</td>
+      </tbody>
+    </table>
     `
   }
 
@@ -48,6 +45,14 @@ export class MyElement extends LitElement {
   }
 
   static styles = css`
+
+    table, td {
+      border: 1px solid black;
+    }
+    thead, tfoot {
+      background-color: #333;
+      color: #fff;
+    }
     :host {
       max-width: 1280px;
       margin: 0 auto;
