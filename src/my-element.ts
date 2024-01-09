@@ -9,7 +9,7 @@ import viteLogo from '/vite.svg'
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement('my-element')
+@customElement('x-table')
 export class MyElement extends LitElement {
   /**
    * Copy for the read the docs hint.
@@ -33,7 +33,7 @@ export class MyElement extends LitElement {
       </thead>
       <tbody>
         <td>The table body</td>
-        <td>with two columns</td>
+        <td> two columns</td>
         <td>and three rows</td>
       </tbody>
     </table>
